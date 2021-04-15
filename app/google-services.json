@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "95120551889",
+    "project_id": "surajbhawnawedding",
+    "storage_bucket": "surajbhawnawedding.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:95120551889:android:968cbf54a7343bf41c7af0",
+        "android_client_info": {
+          "package_name": "com.codepundit.surajbhawnawedding"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "95120551889-inrd3kfsqvobpojl49g6f05qfv2mpv9q.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDLel-m0BFbeL13ynj7181fY1b9h949u-w"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "95120551889-inrd3kfsqvobpojl49g6f05qfv2mpv9q.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
