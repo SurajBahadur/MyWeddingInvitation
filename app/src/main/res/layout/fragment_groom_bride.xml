@@ -82,7 +82,6 @@
                 android:id="@+id/ivInvitation"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:rotation="180"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -96,6 +95,17 @@
                 app:zoomage_translatable="true"
                 app:zoomage_zoomable="true" />
 
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Due to night curfew in the Panchkula region. Timings of the programs has been shifted to morning."
+                android:textColor="@color/white"
+                app:layout_constraintEnd_toStartOf="@+id/guideline3"
+                app:layout_constraintStart_toStartOf="@+id/guideline4"
+                app:layout_constraintTop_toBottomOf="@+id/ivProfile" />
+
             <androidx.constraintlayout.helper.widget.Layer
                 android:id="@+id/layoutInfoHolder"
                 android:layout_width="wrap_content"
@@ -108,7 +118,59 @@
                 app:layout_constraintBottom_toTopOf="@+id/ivInvitation"
                 app:layout_constraintEnd_toStartOf="@+id/ivInvitation"
                 app:layout_constraintStart_toEndOf="@+id/ivInvitation"
-                app:layout_constraintTop_toBottomOf="@+id/ivInvitation" />
+                app:layout_constraintTop_toBottomOf="@+id/ivInvitation"
+                tools:visibility="gone" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnCard1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Card 1" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnCard2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Card 2" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnUpdated"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Updated card" />
+
+            <androidx.constraintlayout.helper.widget.Flow
+                android:id="@+id/flowInvitationCard"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:constraint_referenced_ids="btnCard1,btnCard2,btnUpdated"
+                app:flow_horizontalGap="@dimen/_5sdp"
+                app:flow_horizontalStyle="spread_inside"
+                app:flow_wrapMode="aligned"
+                app:layout_constraintEnd_toStartOf="@+id/guideline3"
+                app:layout_constraintStart_toStartOf="@+id/guideline4"
+                app:layout_constraintTop_toBottomOf="@+id/textView6" />
+
+            <androidx.constraintlayout.helper.widget.Layer
+                android:id="@+id/layer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:constraint_referenced_ids="textView6,btnCard2,btnUpdated,btnCard1"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/floatingActionButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:src="@drawable/ic_baseline_sync_alt_24"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 

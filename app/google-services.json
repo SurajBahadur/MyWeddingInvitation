@@ -1,33 +1,33 @@
 {
   "project_info": {
-    "project_number": "95120551889",
-    "project_id": "surajbhawnawedding",
-    "storage_bucket": "surajbhawnawedding.appspot.com"
+    "project_number": "911339885742",
+    "project_id": "my-wedding-b4a75",
+    "storage_bucket": "my-wedding-b4a75.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:95120551889:android:968cbf54a7343bf41c7af0",
+        "mobilesdk_app_id": "1:911339885742:android:3a153ff941f4b8d218093f",
         "android_client_info": {
-          "package_name": "com.codepundit.surajbhawnawedding"
+          "package_name": "com.codepundit.myweddinginvitation"
         }
       },
       "oauth_client": [
         {
-          "client_id": "95120551889-inrd3kfsqvobpojl49g6f05qfv2mpv9q.apps.googleusercontent.com",
+          "client_id": "911339885742-uknn9rmq5hm7eoqf76pgv2208q9uckc6.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyDLel-m0BFbeL13ynj7181fY1b9h949u-w"
+          "current_key": "AIzaSyBKRNZB6wEk3PDnzvV6uMhhbiZdGjep4EQ"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "95120551889-inrd3kfsqvobpojl49g6f05qfv2mpv9q.apps.googleusercontent.com",
+              "client_id": "911339885742-uknn9rmq5hm7eoqf76pgv2208q9uckc6.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">SurajWeddingInvitation</string>
+    <string name="app_name">My Wedding Invitation</string>
     <string name="title_activity_home">HomeActivity</string>
     <string name="tab_text_1">Groom</string>
     <string name="tab_text_2">Bride</string>
@@ -28,5 +28,6 @@
     <string name="header_txt">Suraj 💗 Bhawna</string>
     <string name="wedding_invitation">Wedding Invitation</string>
     <string name="venue_location">Youth Hostel, Sector 3, Panchkula (Haryana)</string>
-    <string name="click_to_navigation_location">Click to Navigation Location</string>
+    <string name="click_to_navigation_location">Click to Navigate Location</string>
+    <string name="action_like">Like</string>
 </resources>

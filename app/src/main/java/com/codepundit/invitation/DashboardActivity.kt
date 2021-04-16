@@ -1,6 +1,8 @@
 package com.codepundit.invitation
 
+import android.content.ActivityNotFoundException
 import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
@@ -72,6 +74,15 @@ class DashboardActivity : AppCompatActivity(), NavigationView.OnNavigationItemSe
         return true
     }
 
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        when(item.itemId){
+            R.id.action_like->{
+                openPlayStoreIntent()
+                return true
+            }
+        }
+        return super.onOptionsItemSelected(item)
+    }
 
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
         when (item.itemId) {
@@ -83,17 +94,63 @@ class DashboardActivity : AppCompatActivity(), NavigationView.OnNavigationItemSe
             R.id.nav_venue -> {
                 startActivity(Intent(this, VenueActivity::class.java))
             }
-            R.id.nav_direction -> {
+            /*R.id.nav_direction -> {
                 startActivity(Intent(this, DirectionActivity::class.java))
-            }
+            }*/
             R.id.nav_contact -> {
                 startActivity(Intent(this, ContactActivity::class.java))
             }
             R.id.nav_share -> {
+                share()
 
             }
         }
         drawerLayout.closeDrawer(GravityCompat.START)
         return true
+    }
+
+    private fun share() {
+        val builder = StringBuilder()
+        builder.append("💗 Wedding Invitation 💗")
+        builder.append("\n")
+        builder.append(
+            "In this little life, we are always ready to hunt down happiness. I am here to invite you to be a reason for much" +
+                    "more happiness at my wedding and give me one more reason to smile"
+        )
+        builder.append("\n")
+        builder.append("\n")
+        builder.append("Invitation App")
+        builder.append("\n")
+        builder.append("\n")
+        builder.append("https://play.google.com/store/apps/details?id=${packageName}")
+        showShareDialog(builder.toString())
+    }
+
+
+    fun openPlayStoreIntent() {
+        val appPackageName = packageName // getPackageName() from Context or Activity object
+        try {
+            startActivity(
+                Intent(
+                    Intent.ACTION_VIEW,
+                    Uri.parse("market://details?id=$appPackageName")
+                )
+            )
+        } catch (anfe: ActivityNotFoundException) {
+            startActivity(
+                Intent(
+                    Intent.ACTION_VIEW,
+                    Uri.parse("https://play.google.com/store/apps/details?id=$appPackageName")
+                )
+            )
+        }
+    }
+
+    private fun showShareDialog(dataToShare: String) {
+        val intent = Intent()
+        intent.action = "android.intent.action.SEND"
+        intent.putExtra("android.intent.extra.TEXT", dataToShare)
+        intent.type = "text/plain"
+        startActivity(intent)
     }
 }

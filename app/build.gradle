@@ -11,7 +11,7 @@ android {
     buildToolsVersion "30.0.3"
 
     defaultConfig {
-        applicationId "com.codepundit.surajbhawnawedding"
+        applicationId "com.codepundit.myweddinginvitation"
         minSdkVersion 21
         targetSdkVersion 30
         versionCode 1
@@ -22,7 +22,9 @@ android {
 
     buildTypes {
         release {
-            minifyEnabled false
+            minifyEnabled true
+            shrinkResources true
+            debuggable false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }

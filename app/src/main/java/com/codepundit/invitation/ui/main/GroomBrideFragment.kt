@@ -10,10 +10,11 @@ import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
 import com.codepundit.invitation.R
 import com.codepundit.invitation.databinding.FragmentGroomBrideBinding
+import com.codepundit.invitation.utis.loadCard
 import com.codepundit.invitation.utis.loadImageRound
 
 
-class GroomBrideFragment : Fragment() {
+class GroomBrideFragment : Fragment(), View.OnClickListener {
 
     private lateinit var binding: FragmentGroomBrideBinding
     override fun onCreateView(
@@ -27,29 +28,45 @@ class GroomBrideFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        updateUI()
+        setClickListeners()
+    }
+
+    private fun setClickListeners() {
+        binding.btnCard1.setOnClickListener(this)
+        binding.btnCard2.setOnClickListener(this)
+        binding.btnUpdated.setOnClickListener(this)
+        binding.floatingActionButton.setOnClickListener(this)
+    }
+
+    private fun updateUI() {
         when (arguments?.getInt(PlaceholderFragment.ARG_SECTION_NUMBER)) {
             1 -> {
                 //GROOM
                 binding.tvName.text = getString(R.string.groom_name)
                 binding.tvDenoteParent.text = "S/O"
-                binding.tvParentName.text=getString(R.string.groom_parent)
+                binding.tvParentName.text = getString(R.string.groom_parent)
                 binding.ivProfile.loadImageRound(R.drawable.ic_groom)
+                binding.layer.visibility = View.GONE
+                binding.floatingActionButton.visibility = View.GONE
             }
             2 -> {
                 //BRIDE
                 binding.tvName.text = getString(R.string.bride_name)
                 binding.tvDenoteParent.text = "D/O"
-                binding.tvParentName.text=getString(R.string.bride_parent)
+                binding.tvParentName.text = getString(R.string.bride_parent)
                 binding.ivProfile.loadImageRound(R.drawable.ic_bride)
+                binding.layer.visibility = View.GONE
+                binding.floatingActionButton.visibility = View.GONE
             }
             3 -> {
                 //INVITATION
+                binding.layer.visibility = View.VISIBLE
                 binding.tvName.visibility = View.GONE
                 binding.ivProfile.visibility = View.GONE
-                Glide.with(this)
-                    .load(R.drawable.ic_invitation_card)
-                    .centerCrop()
-                    .into(binding.ivInvitation)
+                binding.floatingActionButton.visibility = View.VISIBLE
+                binding.ivInvitation.loadCard(R.drawable.ic_invitation_card)
+                binding.ivInvitation.rotation=180f
             }
         }
     }
@@ -66,5 +83,32 @@ class GroomBrideFragment : Fragment() {
             }
         }
 
+    }
+
+    override fun onClick(v: View?) {
+        when (v?.id) {
+            R.id.btnCard1 -> {
+                binding.ivInvitation.loadCard(R.drawable.ic_invitation_card)
+                binding.ivInvitation.rotation=180f
+            }
+            R.id.btnCard2 -> {
+                binding.ivInvitation.loadCard(R.drawable.ic_card_greet)
+                binding.ivInvitation.rotation=0f
+
+            }
+            R.id.btnUpdated -> {
+                binding.ivInvitation.loadCard(R.drawable.bg_wedding_morning)
+                binding.ivInvitation.rotation=0f
+            }
+            R.id.floatingActionButton->{
+                if(binding.layer.visibility==View.VISIBLE){
+//                    binding.layer.animate().alpha(0f).duration = 3000
+                    binding.layer.visibility=View.GONE
+                }else{
+//                    binding.layer.animate().alpha(1f).duration = 3000
+                    binding.layer.visibility=View.VISIBLE
+                }
+            }
+        }
     }
 }

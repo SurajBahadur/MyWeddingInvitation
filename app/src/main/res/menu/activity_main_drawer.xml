@@ -12,10 +12,10 @@
             android:id="@+id/nav_venue"
             android:icon="@drawable/ic_venue"
             android:title="@string/menu_venue" />
-        <item
+        <!--<item
             android:id="@+id/nav_direction"
             android:icon="@drawable/ic_direction"
-            android:title="@string/menu_direction" />
+            android:title="@string/menu_direction" />-->
         <item
             android:id="@+id/nav_contact"
             android:icon="@drawable/ic_contact"
