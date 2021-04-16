@@ -12,3 +12,8 @@
 - Firebase push notification to notify the installed relatives about any change in the event.
 
 
+## License
+
+MIT
+
+**Free Software, Hell Yeah!**
