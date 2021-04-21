@@ -14,8 +14,8 @@
 
 ## Screenshots
 <img src="https://user-images.githubusercontent.com/19315803/115496224-d81c9000-a286-11eb-9501-426354d2a2de.jpg" width="600" height="900">
-<img src="https://user-images.githubusercontent.com/19315803/115496231-db178080-a286-11eb-9dd1-5905dd6ad380.jpg" width="600" height="900">
 <img src="https://user-images.githubusercontent.com/19315803/115496236-dce14400-a286-11eb-9969-534c91ab4cbd.jpg" width="600" height="900">
+<img src="https://user-images.githubusercontent.com/19315803/115496231-db178080-a286-11eb-9dd1-5905dd6ad380.jpg" width="600" height="900">
 
 
 ## License
