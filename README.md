@@ -7,6 +7,7 @@
 - Detail of Groom and Bride. 
 - Invitation card. 
 - Marriage Venue.
+- List of people to contact.
 - Engagment and marriage pics(Coming soon)
 - Share the applicatin with your friends.
 - Firebase push notification to notify the installed relatives about any change in the event.
